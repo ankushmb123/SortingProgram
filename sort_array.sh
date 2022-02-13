@@ -12,11 +12,11 @@ while [ "$count" -le "$maxcount" ]
 echo "Array in original order"
 echo ${arr[*]}
 
-#Performing Bubble sort
+# Performing Bubble sort
 for ((i=0; i<=10; i++))
 do
 
-   for((j = 0; j<10-i-1; j++))
+   for((j = 0; j<=10-i-1; j++))
    do
 
       if [[ ${arr[j]} -gt ${arr[$((j+1))]} ]]
@@ -32,5 +32,5 @@ done
 echo "Array in sorted order :"
 echo ${arr[*]}
 echo "Second largest no. in array :" ${arr[9]};
-echo "Second smallest no. in array :" ${arr[2]};
+echo "Second smallest no. in array :" ${arr[1]};
 
