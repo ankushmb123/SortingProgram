@@ -16,13 +16,13 @@ echo ${arr[*]}
 for ((i=0; i<=10; i++))
 do
 
-   for((j = 0; j<=10-i-1; j++))
+   for((j = 0; j<10-i-1; j++))
    do
 
       if [[ ${arr[j]} -gt ${arr[$((j+1))]} ]]
       then
           # swap
-          temp=${arr[i]}
+          temp=${arr[j]}
           arr[$j]=${arr[$((j+1))]}
           arr[$((j+1))]=$temp
         fi
@@ -32,5 +32,5 @@ done
 echo "Array in sorted order :"
 echo ${arr[*]}
 echo "Second largest no. in array :" ${arr[9]};
-echo "Second smallest no. in array :" ${arr[1]};
+echo "Second smallest no. in array :" ${arr[2]};
 
